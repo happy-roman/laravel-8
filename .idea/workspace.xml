@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aef84c28-aae9-4480-8bc2-ec014e7443ca" name="Default Changelist" comment="" />
+    <list default="true" id="aef84c28-aae9-4480-8bc2-ec014e7443ca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -153,7 +158,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600700518801</updated>
-      <workItem from="1600700519961" duration="8173000" />
+      <workItem from="1600700519961" duration="9320000" />
+      <workItem from="1601292387270" duration="1301000" />
     </task>
     <servers />
   </component>
@@ -161,22 +167,22 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1600700673631">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1600713714503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600700673631" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1600700673629">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600713714503" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1600713714503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600700673629" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1600700673629">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600713714503" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1600713714503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600700673629" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1600700673629">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600713714503" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1600713714503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600700673629" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600713714503" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1600709282284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
