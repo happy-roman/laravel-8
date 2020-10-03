@@ -2,17 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aef84c28-aae9-4480-8bc2-ec014e7443ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/News/CategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/News/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/News/News.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel-8.vagrant.7z" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel-8.vagrant.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/404.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-8.vagrant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-8.vagrant.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainPageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/News/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/News/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-8.vagrant.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/blocks/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/news/category-news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/category-news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/news/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/news/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/post.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,6 +144,7 @@
       <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hpGFmTHuTnjKlNa9Nctwv6FgZL" />
@@ -151,6 +160,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -178,7 +188,9 @@
       <workItem from="1600700519961" duration="9320000" />
       <workItem from="1601292387270" duration="15674000" />
       <workItem from="1601641267654" duration="4534000" />
-      <workItem from="1601718191708" duration="6567000" />
+      <workItem from="1601718191708" duration="9317000" />
+      <workItem from="1601732764862" duration="6187000" />
+      <workItem from="1601750643478" duration="1217000" />
     </task>
     <task id="LOCAL-00001" summary="lesson-2 is done">
       <created>1601319088244</created>
@@ -187,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601319088245</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="lesson-3 almost ready">
+      <created>1601725335623</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601725335623</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,17 +215,18 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="lesson-2 is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson-2 is done" />
+    <MESSAGE value="lesson-3 almost ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson-3 almost ready" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="749" y="274" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601647744693">
+    <state x="749" y="274" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601738126634">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="749" y="274" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601647744693" />
-    <state x="580" y="88" key="CommitChangelistDialog2" timestamp="1601319086028">
+    <state x="749" y="274" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601738126634" />
+    <state x="580" y="88" key="CommitChangelistDialog2" timestamp="1601725333445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="580" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1601319086028" />
+    <state x="580" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1601725333445" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1600713714503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -227,14 +247,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601719453910" />
-    <state x="974" y="429" key="NewPhpFileDialog" timestamp="1601316708110">
+    <state x="974" y="429" key="NewPhpFileDialog" timestamp="1601740228276">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="974" y="429" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601316708110" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1601319114988">
+    <state x="974" y="429" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601740228276" />
+    <state x="461" y="165" width="1272" height="710" key="SettingsEditor" timestamp="1601732883761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601319114988" />
+    <state x="461" y="165" width="1272" height="710" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601732883761" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1601725340609">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601725340609" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1601645931507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\News\CategoryController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\News\NewsController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('.*', [MainPageController::class, 'pageNotFound']);
+Route::get('/', [MainPageController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 
 /**
@@ -35,7 +35,7 @@ Route::name('news.')
                 ->group(
                     function() {
                         Route::get('/{slug}', [CategoryController::class, 'show'])->name('name');
-                        Route::get('/post/{id}', [NewsController::class, 'onePost'])->name('post');
+                        Route::get('/post/{id}', [NewsController::class, 'onePost'])->name('post')->where('id', '[0-9]');
                     }
                 );
         }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark  bg-dark scrolling-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark scrolling-navbar mb-5">
     <div class="container d-flex justify-content-between align-items-center ">
         <div class="navbar-header">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRightAlignExample"
