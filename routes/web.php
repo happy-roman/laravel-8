@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\News\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\News\NewsController;
 use Illuminate\Support\Facades\Route;
@@ -27,13 +28,13 @@ Route::name('news.')
     ->namespace('News')
     ->group(
         function() {
-            Route::get('/', [NewsController::class, 'index'])->name('category');
+            Route::get('/', [CategoryController::class, 'index'])->name('category');
             Route::name('category.')
                 ->prefix('category')
                 ->namespace('News')
                 ->group(
                     function() {
-                        Route::get('/{name}', [NewsController::class, 'category'])->name('name');
+                        Route::get('/{slug}', [CategoryController::class, 'show'])->name('name');
                         Route::get('/post/{id}', [NewsController::class, 'onePost'])->name('post');
                     }
                 );
