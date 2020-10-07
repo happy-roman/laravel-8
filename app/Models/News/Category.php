@@ -30,10 +30,7 @@ class Category
 
     public static function getCategories()
     {
-        $categories = json_decode(
-            File::get(storage_path() . '/categories.json'),
-            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-        return $categories;
+        return json_decode( File::get(storage_path() . '/categories.json'),true);
     }
 
     public static function getCategoryById($id) {

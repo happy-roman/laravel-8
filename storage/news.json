@@ -66,5 +66,12 @@
         "title": "Test News",
         "category_id": "2",
         "text": "Это тестовая новость"
+    },
+    "10": {
+        "id": 10,
+        "isPrivate": false,
+        "title": "Алгоритмы и структуры данных на PHP",
+        "category_id": "1",
+        "text": "mknjbvtcxfvhjbkn"
     }
 }

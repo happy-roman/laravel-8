@@ -20,9 +20,7 @@ class News
 
     public static function getNews()
     {
-        $allNews = json_decode( File::get(storage_path() . '/news.json' ),
-            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-        return $allNews;
+        return json_decode( File::get(storage_path() . '/news.json' ), true);
     }
 
     public static function getNewsId($id)

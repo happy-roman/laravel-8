@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\News\Category;
+use App\Models\News\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use phpDocumentor\Reflection\Types\Static_;
@@ -13,7 +14,7 @@ use phpDocumentor\Reflection\Types\Static_;
 class AdminController extends Controller
 {
     private static $newNews = [
-        'id' => null,
+        'id' => 0,
         'isPrivate' => false,
     ];
     public function index(){
@@ -23,13 +24,17 @@ class AdminController extends Controller
     public function create(Request $request) {
 
         if ($request->isMethod('post')) {
-            $arr = array_merge(static::$newNews, $request->all());
 
-            $allNews = json_decode(
-                File::get(storage_path() . '/news.json'),
-                JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-            $arr['id'] = count($allNews) + 1;
+            $allNews = News::getNews();
+
+            $arr = array_merge(static::$newNews, $request->except('_token'));
+
             array_push($allNews, $arr);
+
+            $id = array_key_last($allNews);
+
+            $allNews[$id]['id'] = $id;
+
             File::put(storage_path() . '/news.json',
                 json_encode($allNews, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
             $request->flash();
