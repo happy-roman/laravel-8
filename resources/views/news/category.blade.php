@@ -1,9 +1,12 @@
 @extends('layout.app')
 @section('content')
     <section class="container">
+        <h1>Categories news</h1>
+        <hr>
         <ul>
-            <li class="my-3 nav-link font-weight-bold"><a href="<?=route('news.category.name', ['name'=> 'category-1'])?>">category-1</a></li>
-            <li class="my-3 nav-link font-weight-bold"><a href="<?=route('news.category.name', ['name'=> 'category-2'])?>">category-2</a></li>
+            @foreach($categories as $item)
+                <li class="my-3 nav-link font-weight-bold"><a href="{{route('news.category.name', $item['slug'])}}">{{ $item['title'] }}</a></li>
+            @endforeach
         </ul>
     </section>
 @endsection

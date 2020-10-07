@@ -1,6 +1,7 @@
 @extends('layout.app')
 @section('content')
     <section class="container">
-        <h1>Post-{{$id}}</h1>
+        <h2>{{ $news['title'] }}</h2>
+        <p>{{ $news['text'] }}</p>
     </section>
 @endsection

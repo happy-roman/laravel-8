@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\News\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\News\NewsController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,35 +30,29 @@ Route::name('news.')
     ->namespace('News')
     ->group(
         function() {
-            Route::get('/', [NewsController::class, 'index'])->name('category');
+            Route::get('/', [CategoryController::class, 'index'])->name('category');
             Route::name('category.')
                 ->prefix('category')
                 ->namespace('News')
                 ->group(
                     function() {
-                        Route::get('/{name}', [NewsController::class, 'category'])->name('name');
+                        Route::get('/{slug}', [CategoryController::class, 'show'])->name('name');
                         Route::get('/post/{id}', [NewsController::class, 'onePost'])->name('post');
                     }
                 );
         }
     );
+Route::name('admin.')
+    ->prefix('admin')
+    ->namespace('Admin')
+    ->group(
+        function () {
+            Route::get('/', [AdminController::class, 'index'])->name('index');
+            Route::match(['get','post'],'/create', [AdminController::class, 'create'])->name('create');
 
+        }
+    );
 
-/**
-второй способ групировки
- */
-//Route::group([
-//    'prefix' => 'news',
-//    'namespace' => 'News',
-//    'as' => 'news.'
-//], function (){
-//  Route::get('/', [NewsController::class, 'index'])->name('all');
-//  Route::get('/{id}', [NewsController::class, 'onePost'])->name('one');
-//});
+Auth::routes();
 
-/**
-без группировки
- */
-//Route::get('/news', [NewsController::class, 'index'])->name('news-all');
-//Route::get('/news/{id}', [NewsController::class, 'onePost'])->name('news-one');
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
