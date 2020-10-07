@@ -34,5 +34,37 @@
         "title": "PHP. Начальный уровень",
         "category_id": "1",
         "text": "hkj,fmhydnghd"
+    },
+    "6": {
+        "id": 6,
+        "isPrivate": false,
+        "_token": "C355ufr5RuuVAwC82H2I3A6udUUkkQIXmd8vhpoH",
+        "title": "Test News",
+        "category_id": "2",
+        "text": "Это тестовая новость"
+    },
+    "7": {
+        "id": 7,
+        "isPrivate": false,
+        "_token": "C355ufr5RuuVAwC82H2I3A6udUUkkQIXmd8vhpoH",
+        "title": "Test News",
+        "category_id": "2",
+        "text": "Это тестовая новость"
+    },
+    "8": {
+        "id": 8,
+        "isPrivate": false,
+        "_token": "C355ufr5RuuVAwC82H2I3A6udUUkkQIXmd8vhpoH",
+        "title": "Test News",
+        "category_id": "2",
+        "text": "Это тестовая новость"
+    },
+    "9": {
+        "id": 9,
+        "isPrivate": false,
+        "_token": "C355ufr5RuuVAwC82H2I3A6udUUkkQIXmd8vhpoH",
+        "title": "Test News",
+        "category_id": "2",
+        "text": "Это тестовая новость"
     }
 }
