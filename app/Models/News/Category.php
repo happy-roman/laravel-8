@@ -4,21 +4,10 @@
 namespace App\Models\News;
 
 
+use Illuminate\Support\Facades\File;
+
 class Category
 {
-    private static $categories = [
-        1 => [
-            'id' => 1,
-            'title' => 'Спорт',
-            'slug' => 'sport'
-        ],
-        2 => [
-            'id' => 2,
-            'title' => 'Политика',
-            'slug' => 'politics'
-        ],
-    ];
-
     public static function getCategoryNameBySlug($slug) {
         $id = Category::getCategoryIdBySlug($slug);
         $category = Category::getCategoryById($id);
@@ -29,7 +18,8 @@ class Category
 
     public static function getCategoryIdBySlug($slug) {
         $id = null;
-        foreach (static::$categories as $category) {
+        $categories = Category::getCategories();
+        foreach ($categories as $category) {
             if ($category['slug'] == $slug) {
                 $id = $category['id'];
                 break;
@@ -40,14 +30,19 @@ class Category
 
     public static function getCategories()
     {
-        return static::$categories;
+        $categories = json_decode(
+            File::get(storage_path() . '/categories.json'),
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        return $categories;
     }
 
     public static function getCategoryById($id) {
-        if (array_key_exists($id, static::$categories))
-            return static::$categories[$id];
+        $categories = Category::getCategories();
+        if (array_key_exists($id, $categories))
+            return $categories[$id];
         else
             return [];
     }
+
 
 }
