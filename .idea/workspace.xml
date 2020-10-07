@@ -25,14 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aef84c28-aae9-4480-8bc2-ec014e7443ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/News/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/News/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News/News.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/news.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/news.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
-    </list>
+    <list default="true" id="aef84c28-aae9-4480-8bc2-ec014e7443ca" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -232,7 +225,7 @@
       <workItem from="1601641267654" duration="4534000" />
       <workItem from="1601718191708" duration="6567000" />
       <workItem from="1601801964608" duration="14936000" />
-      <workItem from="1601994075498" duration="16289000" />
+      <workItem from="1601994075498" duration="16727000" />
     </task>
     <task id="LOCAL-00001" summary="lesson-2 is done">
       <created>1601319088244</created>
