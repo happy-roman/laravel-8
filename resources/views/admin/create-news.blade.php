@@ -37,8 +37,7 @@
                             </div>
 
                             <div class="form-check">
-                                {{--@if (old('isPrivate')) checked @endif--}}
-                                <input  id="newsPrivate" name="isPrivate" type="checkbox" value="1"
+                                <input @if (old('isPrivate')) checked @endif id="newsPrivate" name="isPrivate" type="checkbox" value="1"
                                        class="form-check-input">
                                 <label for="newsPrivate">Приватная</label>
 

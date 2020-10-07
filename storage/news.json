@@ -28,9 +28,11 @@
         "category_id": 2
     },
     "5": {
+        "id": 5,
+        "isPrivate": false,
         "_token": "C355ufr5RuuVAwC82H2I3A6udUUkkQIXmd8vhpoH",
-        "title": "Основы баз данных",
-        "category_id": "2",
-        "text": "gdfdss"
+        "title": "PHP. Начальный уровень",
+        "category_id": "1",
+        "text": "hkj,fmhydnghd"
     }
 }
