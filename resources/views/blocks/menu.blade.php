@@ -10,12 +10,12 @@
         <div class="collapse navbar-collapse" id="navbarRightAlignExample">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0 smooth-scroll">
                 <li><a class="nav-link waves-effect waves-light
-                    {{ Request::path() ==  '/' ? 'active' : ''  }}" href="{{url('/')}}">Home</a></li>
+                    {{ Request::path() ==  '/' ? 'active' : ''  }}" href="<?=route('home')?>">Home</a></li>
                 <li><a class="nav-link waves-effect waves-light
-                    {{ Request::path() ==  'about' ? 'active' : ''  }}" href="{{url('about')}}">About</a></li>
+                    {{ Request::path() ==  'about' ? 'active' : ''  }}" href="<?=route('about.index')?>">About</a></li>
                 <li><a class="nav-link waves-effect waves-light
-                    {{ Request::is('post/*') || Request::path() ==  'posts' ? 'active' : ''  }}"
-                       href="{{url('posts')}}">Posts</a></li>
+                    {{ Request::is('news/*') || Request::path() ==  'news' ? 'active' : ''  }}"
+                       href="<?=route('news.category')?>">News</a></li>
             </ul>
         </div>
     </div>
