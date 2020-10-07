@@ -26,25 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aef84c28-aae9-4480-8bc2-ec014e7443ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-8.vagrant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-8.vagrant.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/create-news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/create-news.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/menu-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/menu-admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blocks/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/news/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/News/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/News/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News/News.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/news.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/news.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Remote PHP 7.4">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
@@ -181,9 +168,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -194,11 +184,40 @@
       <recent name="E:\OpenServer\domains\laravel-8.vagrant\resources\views\pages" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.ExampleTest.testGetNews">
+    <configuration name="ExampleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ExampleTest" configuration_file="/home/vagrant/code/laravel-8.vagrant/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ExampleTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ExampleTest.testCreateNews (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ExampleTest" configuration_file="/home/vagrant/code/laravel-8.vagrant/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ExampleTest.php" method="testCreateNews" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ExampleTest.testGetCategories (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ExampleTest" configuration_file="/home/vagrant/code/laravel-8.vagrant/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ExampleTest.php" method="testGetCategories" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ExampleTest.testGetCategories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\ExampleTest" configuration_file="/home/vagrant/code/laravel-8.vagrant/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ExampleTest.php" method="testGetCategories" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ExampleTest.testGetNews" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ExampleTest" configuration_file="/home/vagrant/code/laravel-8.vagrant/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ExampleTest.php" method="testGetNews" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.ExampleTest.testGetNews" />
+        <item itemvalue="PHPUnit.ExampleTest.testCreateNews (1)" />
+        <item itemvalue="PHPUnit.ExampleTest.testGetCategories (1)" />
+        <item itemvalue="PHPUnit.ExampleTest" />
+        <item itemvalue="PHPUnit.ExampleTest.testGetCategories" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -212,7 +231,8 @@
       <workItem from="1601292387270" duration="15674000" />
       <workItem from="1601641267654" duration="4534000" />
       <workItem from="1601718191708" duration="6567000" />
-      <workItem from="1601801964608" duration="10963000" />
+      <workItem from="1601801964608" duration="14936000" />
+      <workItem from="1601994075498" duration="16289000" />
     </task>
     <task id="LOCAL-00001" summary="lesson-2 is done">
       <created>1601319088244</created>
@@ -255,46 +275,66 @@
     <option name="LAST_COMMIT_MESSAGE" value="lesson-2 is done" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="540" y="175" key="#CLI_Interpreters" timestamp="1602066427100">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="175" key="#CLI_Interpreters/0.0.1920.1040@0.0.1920.1040" timestamp="1602066427100" />
     <state x="749" y="274" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601812424706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="749" y="274" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601812424706" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602075662264">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602075662264" />
     <state x="580" y="88" key="CommitChangelistDialog2" timestamp="1601319086028">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="580" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1601319086028" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601761905908">
+    <state x="745" y="233" key="FileChooserDialogImpl" timestamp="1602066397049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601761905908" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601761905908">
+    <state x="745" y="233" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602066397049" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1602082804257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601761905908" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601761905908">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602082804257" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1602082804257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601761905908" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601761905908">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602082804257" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1602082804257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601761905908" />
-    <state x="706" y="243" key="NewPhpClassDialog" timestamp="1601812195955">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602082804257" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1602082804257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="706" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601812195955" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602082804257" />
+    <state x="706" y="243" key="NewPhpClassDialog" timestamp="1602066593529">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="706" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602066593529" />
     <state x="974" y="429" key="NewPhpFileDialog" timestamp="1601813739107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="974" y="429" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601813739107" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1602066432051">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602066432051" />
     <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1601319114988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601319114988" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1601645931507">
+    <state x="689" y="264" width="755" height="512" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1602074578180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601645931507" />
+    <state x="689" y="264" width="755" height="512" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602074578180" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1602069837855">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602069837855" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600708094771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
