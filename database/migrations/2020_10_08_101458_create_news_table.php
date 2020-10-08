@@ -15,7 +15,13 @@ class CreateNewsTable extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('category_id');
+            $table->string('title');
+            $table->text('text');
+            $table->string('image')->nullable(true)->default(null);
+            $table->boolean('isPrivate')->default(false);
             $table->timestamps();
+//            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

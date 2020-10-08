@@ -2,6 +2,7 @@
 
 namespace App\Models\News;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
 class News
@@ -11,7 +12,7 @@ class News
         $allNews = News::getNews();
         $news = [];
         foreach ($allNews as $item) {
-            if ($item['category_id'] == $id) {
+            if ($item->category_id == $id) {
                 $news[] = $item;
             }
         }
@@ -20,7 +21,8 @@ class News
 
     public static function getNews()
     {
-        return json_decode( File::get(storage_path() . '/news.json' ), true);
+        return DB::table('news')->get();
+//        return json_decode( File::get(storage_path() . '/news.json' ), true);
     }
 
     public static function getNewsId($id)

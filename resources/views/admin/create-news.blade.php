@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <form method="POST" action="{{ route('admin.create') }}">
+                        <form method="POST" action="{{ route('admin.create') }} " enctype="multipart/form-data">
 
                             @csrf
 
@@ -22,7 +22,7 @@
                                 <select name="category_id" id="newsCategory" class="form-control">
 
                                     @forelse($categories as $item)
-                                        <option  value="{{ $item['id'] }}">{{ $item['title'] }}</option>
+                                        <option  value="{{ $item->id }}">{{ $item->title }}</option>
                                         {{--@if ($item['id'] == old('category_id')) selected @endif--}}
                                     @empty
                                         <option value="0">Нет категорий</option>
@@ -34,6 +34,10 @@
                             <div class="form-group">
                                 <label for="newsText">Текст новости</label>
                                 <textarea name="text" id="newsText" class="form-control">{{--{{ old('text') }}--}}</textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="file" name="image">
                             </div>
 
                             <div class="form-check">
