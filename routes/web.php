@@ -37,7 +37,7 @@ Route::name('news.')
                 ->group(
                     function() {
                         Route::get('/{slug}', [CategoryController::class, 'show'])->name('name');
-                        Route::get('/post/{id}', [NewsController::class, 'onePost'])->name('post');
+                        Route::get('/post/{news}', [NewsController::class, 'onePost'])->name('post');
                     }
                 );
         }
@@ -49,6 +49,8 @@ Route::name('admin.')
         function () {
             Route::get('/', [AdminController::class, 'index'])->name('index');
             Route::match(['get','post'],'/create', [AdminController::class, 'create'])->name('create');
+            Route::match(['get','post'], '/edit', [AdminController::class, 'edit'])->name('edit');
+            Route::match(['get','post'], '/delete', [AdminController::class, 'delete'])->name('delete');
 
         }
     );

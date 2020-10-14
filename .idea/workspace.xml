@@ -26,26 +26,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aef84c28-aae9-4480-8bc2-ec014e7443ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_08_101458_create_news_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_08_104419_create_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/CategorySeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/NewsSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/img-card.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/News/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/News/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/News/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/News/NewsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/News/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/News/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News/News.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/NewsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/NewsSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/create-news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/create-news.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/news/category-news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/category-news.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/news/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/news/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/post.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/news.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +189,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\OpenServer\domains\laravel-8.vagrant\public\css" />
       <recent name="E:\OpenServer\domains\laravel-8.vagrant\app\Http\Controllers\News" />
       <recent name="E:\OpenServer\domains\laravel-8.vagrant\app\Models\News" />
       <recent name="E:\OpenServer\domains\laravel-8.vagrant\resources\views\blocks" />
@@ -253,7 +245,7 @@
       <workItem from="1601718191708" duration="6567000" />
       <workItem from="1601801964608" duration="14936000" />
       <workItem from="1601994075498" duration="18059000" />
-      <workItem from="1602151572000" duration="18011000" />
+      <workItem from="1602151572000" duration="32673000" />
     </task>
     <task id="LOCAL-00001" summary="lesson-2 is done">
       <created>1601319088244</created>

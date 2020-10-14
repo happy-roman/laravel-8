@@ -7,33 +7,34 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <form method="POST" action="{{ route('admin.create') }} " enctype="multipart/form-data">
+                        <form method="POST" action="@if (!$news->id){{ route('admin.create') }}
+                                                    @else{{ route('admin.update', $news) }}@endif"
+                              enctype="multipart/form-data">
 
                             @csrf
 
                             <div class="form-group">
                                 <label for="newsTitle">Заголовок новости</label>
                                 <input type="text" name="title" id="newsTitle" class="form-control"
-                                       value="">{{--{{ old('title') }}--}}
+                                       value="{{ old('title') ?? $news->title}}">
                             </div>
 
                             <div class="form-group">
                                 <label for="newsCategory">Категория новости</label>
                                 <select name="category_id" id="newsCategory" class="form-control">
-
                                     @forelse($categories as $item)
-                                        <option  value="{{ $item->id }}">{{ $item->title }}</option>
-                                        {{--@if ($item['id'] == old('category_id')) selected @endif--}}
+                                        <option @if ($item->id == old('category_id') ?? $item->id == $news->category_id)
+                                                selected @endif value="{{ $item['id'] }}">{{ $item['title'] }}</option>
                                     @empty
                                         <option value="0">Нет категорий</option>
                                     @endforelse
-
                                 </select>
                             </div>
 
                             <div class="form-group">
                                 <label for="newsText">Текст новости</label>
-                                <textarea name="text" id="newsText" class="form-control">{{--{{ old('text') }}--}}</textarea>
+                                <textarea name="text" id="newsText" class="form-control">{{ old('text') ?? $news->text}}
+                                </textarea>
                             </div>
 
                             <div class="form-group">
@@ -41,7 +42,8 @@
                             </div>
 
                             <div class="form-check">
-                                <input @if (old('isPrivate')) checked @endif id="newsPrivate" name="isPrivate" type="checkbox" value="1"
+                                <input @if ($news->isPrivate == 1 || old('isPrivate') == 1) checked @endif
+                                id="newsPrivate" name="isPrivate" type="checkbox" value="1"
                                        class="form-check-input">
                                 <label for="newsPrivate">Приватная</label>
 

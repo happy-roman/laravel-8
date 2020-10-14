@@ -7,20 +7,18 @@ use App\Models\News\Category;
 use App\Models\News\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use function GuzzleHttp\Promise\all;
 
 class NewsController extends Controller
 {
     public function index()
     {
-        $categories = DB::table('categories')->get();
+        $categories = new Category();
         return view('news.category')->with('news', $categories);
-//        return view('news.category')->with('news', Category::getCategories());
     }
 
-    public function onePost($id)
+    public function onePost(News $news)
     {
-        $news = DB::table('news')->find($id);
         return view('news.post')->with('news', $news);
-//        return view('news.post')->with('news', News::getNewsId($id));
     }
 }

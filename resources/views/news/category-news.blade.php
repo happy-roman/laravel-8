@@ -2,7 +2,7 @@
 @section('content')
 
 <section class="container">
-    <h1 class="font-weight-bold">News of {{ $category }}</h1>
+    <h1 class="font-weight-bold">News of {{ $category->title }}</h1>
     <hr>
     @if($news)
         @forelse($news as $item)
