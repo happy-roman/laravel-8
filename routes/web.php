@@ -49,8 +49,9 @@ Route::name('admin.')
         function () {
             Route::get('/', [AdminController::class, 'index'])->name('index');
             Route::match(['get','post'],'/create', [AdminController::class, 'create'])->name('create');
-            Route::match(['get','post'], '/edit', [AdminController::class, 'edit'])->name('edit');
-            Route::match(['get','post'], '/delete', [AdminController::class, 'delete'])->name('delete');
+            Route::match(['get','post'], '/edit/{news}', [AdminController::class, 'edit'])->name('edit');
+            Route::match(['get','post'], '/delete/{news}', [AdminController::class, 'delete'])->name('delete');
+            Route::match(['get','post'], '/update/{news}', [AdminController::class, 'update'])->name('update');
 
         }
     );

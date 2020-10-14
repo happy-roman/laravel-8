@@ -7,10 +7,9 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <form method="POST" action="@if (!$news->id){{ route('admin.create') }}
+                        <form method="POST" action="@if(!$news->id){{ route('admin.create') }}
                                                     @else{{ route('admin.update', $news) }}@endif"
                               enctype="multipart/form-data">
-
                             @csrf
 
                             <div class="form-group">
@@ -50,7 +49,8 @@
                             </div>
 
                             <div class="form-group">
-                                <input class="btn btn-outline-primary rounded" type="submit" value="Добавить новость">
+                                <input class="btn btn-outline-primary" type="submit"
+                                       value="@if ($news->id) Изменить @else Добавить@endif">
                             </div>
                         </form>
 

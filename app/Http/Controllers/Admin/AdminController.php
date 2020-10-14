@@ -51,7 +51,6 @@ class AdminController extends Controller
     }
 
     public function update(Request $request, News $news) {
-        dd($request->news->id);
         $url = null;
         if ($request->file('image')) {
             $path = Storage::putFile('public', $request->file('image'));
