@@ -18,7 +18,7 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-    public function create(Request $request) {
+    public function create(Request $request, News $news) {
 
         if ($request->isMethod('post')) {
             $url = null;
@@ -27,18 +27,18 @@ class AdminController extends Controller
                 $url = Storage::url($path);
             }
 
-            $news = new News();
             $news->image = $url;
             $news->fill($request->except('image', '_token'))->save();
 
             return redirect()->route('news.category.post', $news->id)->with('success', 'Новость добавлена!');
         }
         return view('admin.create-news', [
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'news' => $news
         ]);
     }
 
-    public function destroy(News $news) {
+    public function delete(News $news) {
         $news->delete();
         return redirect()->route('admin.index')->with('success', 'Новость успешно удалена');
     }
