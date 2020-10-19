@@ -9660,7 +9660,7 @@ jQuery.fn.extend( {
 			return ( this[ 0 ] && this[ 0 ].parentNode ) ? this.first().prevAll().length : -1;
 		}
 
-		// AdminController in selector
+		// Index in selector
 		if ( typeof elem === "string" ) {
 			return indexOf.call( jQuery( elem ), this[ 0 ] );
 		}
@@ -9837,7 +9837,7 @@ jQuery.Callbacks = function( options ) {
 		// Queue of execution data for repeatable lists
 		queue = [],
 
-		// AdminController of currently firing callback (modified by add/remove as needed)
+		// Index of currently firing callback (modified by add/remove as needed)
 		firingIndex = -1,
 
 		// Fire callbacks
@@ -36463,7 +36463,7 @@ var modifiers = {
    * @inner
    */
   shift: {
-    /** @prop {number} order=100 - AdminController used to define the order of execution */
+    /** @prop {number} order=100 - Index used to define the order of execution */
     order: 100,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -36510,7 +36510,7 @@ var modifiers = {
    * @inner
    */
   offset: {
-    /** @prop {number} order=200 - AdminController used to define the order of execution */
+    /** @prop {number} order=200 - Index used to define the order of execution */
     order: 200,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -36540,7 +36540,7 @@ var modifiers = {
    * @inner
    */
   preventOverflow: {
-    /** @prop {number} order=300 - AdminController used to define the order of execution */
+    /** @prop {number} order=300 - Index used to define the order of execution */
     order: 300,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -36577,7 +36577,7 @@ var modifiers = {
    * @inner
    */
   keepTogether: {
-    /** @prop {number} order=400 - AdminController used to define the order of execution */
+    /** @prop {number} order=400 - Index used to define the order of execution */
     order: 400,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -36596,7 +36596,7 @@ var modifiers = {
    * @inner
    */
   arrow: {
-    /** @prop {number} order=500 - AdminController used to define the order of execution */
+    /** @prop {number} order=500 - Index used to define the order of execution */
     order: 500,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -36618,7 +36618,7 @@ var modifiers = {
    * @inner
    */
   flip: {
-    /** @prop {number} order=600 - AdminController used to define the order of execution */
+    /** @prop {number} order=600 - Index used to define the order of execution */
     order: 600,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -36669,7 +36669,7 @@ var modifiers = {
    * @inner
    */
   inner: {
-    /** @prop {number} order=700 - AdminController used to define the order of execution */
+    /** @prop {number} order=700 - Index used to define the order of execution */
     order: 700,
     /** @prop {Boolean} enabled=false - Whether the modifier is enabled or not */
     enabled: false,
@@ -36688,7 +36688,7 @@ var modifiers = {
    * @inner
    */
   hide: {
-    /** @prop {number} order=800 - AdminController used to define the order of execution */
+    /** @prop {number} order=800 - Index used to define the order of execution */
     order: 800,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -36712,7 +36712,7 @@ var modifiers = {
    * @inner
    */
   computeStyle: {
-    /** @prop {number} order=850 - AdminController used to define the order of execution */
+    /** @prop {number} order=850 - Index used to define the order of execution */
     order: 850,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -36754,7 +36754,7 @@ var modifiers = {
    * @inner
    */
   applyStyle: {
-    /** @prop {number} order=900 - AdminController used to define the order of execution */
+    /** @prop {number} order=900 - Index used to define the order of execution */
     order: 900,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -49818,7 +49818,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   null,
   null
-
+  
 )
 
 /* hot reload */
@@ -49838,7 +49838,7 @@ component.options.__file = "resources/js/components/ExampleComponent.vue"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

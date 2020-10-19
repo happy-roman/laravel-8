@@ -31,6 +31,7 @@ Route::name('news.')
     ->group(
         function() {
             Route::get('/', [CategoryController::class, 'index'])->name('category');
+            Route::get('/all', [NewsController::class, 'all'])->name('all');
             Route::name('category.')
                 ->prefix('category')
                 ->namespace('News')
@@ -50,7 +51,7 @@ Route::name('admin.')
             Route::get('/', [AdminController::class, 'index'])->name('index');
             Route::match(['get','post'],'/create', [AdminController::class, 'create'])->name('create');
             Route::match(['get','post'], '/edit/{news}', [AdminController::class, 'edit'])->name('edit');
-            Route::match(['get','post'], '/delete/{news}', [AdminController::class, 'delete'])->name('delete');
+            Route::match(['get','post'], '/destroy/{news}', [AdminController::class, 'destroy'])->name('destroy');
             Route::match(['get','post'], '/update/{news}', [AdminController::class, 'update'])->name('update');
 
         }

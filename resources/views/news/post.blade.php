@@ -5,6 +5,6 @@
         <h2>{{ $news->title }}</h2>
         <p>{{ $news->text }}</p>
         <a type="button" class="btn btn-outline-info rounded " data-ripple-color="dark" href="{{ route('admin.edit', $news) }}">Изменить</a>
-        <a type="button" class="btn btn-outline-danger rounded " data-ripple-color="dark" href="{{ route('admin.delete', $news) }}">Удалить</a>
+        <a type="button" class="btn btn-outline-danger rounded " data-ripple-color="dark" href="{{ route('admin.destroy', $news) }}">Удалить</a>
     </section>
 @endsection

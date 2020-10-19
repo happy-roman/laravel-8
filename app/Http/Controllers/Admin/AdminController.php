@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Storage;
 class AdminController extends Controller
 {
     public function index(){
-        return view('admin.index');
+        $news = News::all();
+
+        return view('admin.index')->with('news', $news);
     }
 
     public function create(Request $request, News $news) {
@@ -38,7 +40,7 @@ class AdminController extends Controller
         ]);
     }
 
-    public function delete(News $news) {
+    public function destroy(News $news) {
         $news->delete();
         return redirect()->route('admin.index')->with('success', 'Новость успешно удалена');
     }

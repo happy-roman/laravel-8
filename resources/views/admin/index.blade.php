@@ -7,6 +7,7 @@
             <h1 >Admin-page</h1>
             @include('admin.menu-admin')
             @yield('content-admin')
+
         </div>
     </div>
 </div>

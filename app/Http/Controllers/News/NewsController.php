@@ -16,6 +16,12 @@ class NewsController extends Controller
         $categories = new Category();
         return view('news.category')->with('news', $categories);
     }
+    public function all()
+    {
+//        $news = News::query()->paginate(10);
+        $news = News::all();
+        return view('news.all')->with('news', $news);
+    }
 
     public function onePost(News $news)
     {

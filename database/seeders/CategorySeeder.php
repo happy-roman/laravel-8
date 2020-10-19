@@ -22,8 +22,10 @@ class CategorySeeder extends Seeder
         $data = [];
         for ( $i=0; $i < 5; $i++ ) {
             $data[] = [
-                'title' => $faker->word,
-                'slug' => $faker->word
+//                'title' => $faker->word,
+//                'slug' => $faker->word
+                'title' => 'category-'.($i+1),
+                'slug' => 'category-'.($i+1),
             ];
         }
         return $data;
