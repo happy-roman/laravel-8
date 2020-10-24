@@ -7,11 +7,13 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <form method="POST" action="@if(!$news->id){{ route('admin.create') }}
-                                                    @else{{ route('admin.update', $news) }}@endif"
+                        <form method="POST" action="@if(!$news->id){{ route('admin.news.create') }}
+                                                    @else{{ route('admin.news.update', $news) }}@endif"
                               enctype="multipart/form-data">
                             @csrf
-
+                            @if(!$news->id)
+                                @method('PUT')
+                            @endif
                             <div class="form-group">
                                 <label for="newsTitle">Заголовок новости</label>
                                 <input type="text" name="title" id="newsTitle" class="form-control"
