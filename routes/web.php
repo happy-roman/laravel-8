@@ -1,12 +1,15 @@
 <?php
 
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\News\CategoryController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\News\NewsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\IndexController;
+use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\News\CategoryController;
+use App\Http\Controllers\News\NewsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,18 +23,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
+Route::match(['get','post'],'/profile', [ProfileController::class, 'update'])->name('profile');
 
-/**
-Группиовка роутов
- */
 Route::name('news.')
     ->prefix('news')
     ->namespace('News')
     ->group(
         function() {
             Route::get('/', [CategoryController::class, 'index'])->name('category');
-            Route::get('/all', [NewsController::class, 'all'])->name('all');
             Route::name('category.')
                 ->prefix('category')
                 ->namespace('News')
@@ -43,20 +44,18 @@ Route::name('news.')
                 );
         }
     );
+
 Route::name('admin.')
     ->prefix('admin')
-    ->namespace('Admin')
+    ->namespace('App\Http\Controllers\Admin')
+    ->middleware(['auth', 'is_admin'])
     ->group(
         function () {
-            Route::get('/', [AdminController::class, 'index'])->name('index');
-            Route::match(['get','post'],'/create', [AdminController::class, 'create'])->name('create');
-            Route::match(['get','post'], '/edit/{news}', [AdminController::class, 'edit'])->name('edit');
-            Route::match(['get','post'], '/destroy/{news}', [AdminController::class, 'destroy'])->name('destroy');
-            Route::match(['get','post'], '/update/{news}', [AdminController::class, 'update'])->name('update');
-
+            Route::get('/', [IndexController::class, 'index'])->name('index');
+            Route::resource('/news', 'NewsController')->except(['show']);
+            Route::get('/users', [UsersController::class, 'index'])->name('index');
+            Route::resource('/users', 'UsersController')->except(['show', 'store']);
         }
     );
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -7,7 +7,6 @@
             <h1 >Admin-page</h1>
             @include('admin.menu-admin')
             @yield('content-admin')
-
         </div>
     </div>
 </div>

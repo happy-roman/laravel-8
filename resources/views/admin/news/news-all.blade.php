@@ -20,14 +20,11 @@
                             <input type="submit" class="btn btn-outline-danger rounded"
                                    data-ripple-color="dark"
                                    value="Удалить">
-
                         </form>
-
                         <hr>
                     @empty
                         Нет новостей
                     @endforelse
-{{--                        {{ $news->links() }}--}}
                 </div>
             </div>
         </div>

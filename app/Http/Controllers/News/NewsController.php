@@ -5,9 +5,6 @@ namespace App\Http\Controllers\News;
 use App\Http\Controllers\Controller;
 use App\Models\News\Category;
 use App\Models\News\News;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use function GuzzleHttp\Promise\all;
 
 class NewsController extends Controller
 {
@@ -18,7 +15,6 @@ class NewsController extends Controller
     }
     public function all()
     {
-//        $news = News::query()->paginate(10);
         $news = News::all();
         return view('news.all')->with('news', $news);
     }
