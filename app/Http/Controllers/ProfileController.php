@@ -23,11 +23,11 @@ class ProfileController extends Controller
                     'email' => $request->post('email')
                 ]);
                 $user->save();
-                return redirect()->route('admin.profileUpdate')->with('success', 'Профиль успешно изменен!');
+                return redirect()->route('admin.users.index')->with('success', 'Профиль успешно изменен!');
 
             } else {
                 $errors['password'][] = 'Неверно введен текущий пароль';
-                return redirect()->route('admin.profileUpdate')->withErrors($errors);
+                return redirect()->route('admin.users.index')->withErrors($errors);
             }
         }
 

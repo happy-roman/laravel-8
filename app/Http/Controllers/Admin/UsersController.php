@@ -12,8 +12,7 @@ class UsersController extends Controller
 {
     public function index() {
 
-        $users = User::all();
-
+        $users = User::query()->where('id', '!=', Auth::id())->get();
         return view('admin.profiles.users')->with('users', $users);
     }
 
@@ -45,6 +44,7 @@ class UsersController extends Controller
         } else {
             $user->is_admin = 1;
         }
+
         $user->fill($request->except(['name', 'password', 'email',]))->save();
         return redirect()->route('admin.users.index')->with('success', 'Права успешно изменены');
     }

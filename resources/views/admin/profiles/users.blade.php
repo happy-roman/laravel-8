@@ -18,9 +18,11 @@
 
                         <form method="post" action="{{ route('admin.users.destroy', $item) }}"
                               class="d-flex justify-content-between">
+
+                            @method('PUT')
                             <a type="button" class="btn btn-outline-success rounded"
                                data-ripple-color="dark"
-                               href="{{ route('admin.users.edit', $item) }}">Редактировать</a>
+                               href="{{ route('admin.users.edit', $item) }}">Изменить права</a>
                             @csrf
                             @method('DELETE')
                             <input type="submit" class="btn btn-outline-danger rounded"
