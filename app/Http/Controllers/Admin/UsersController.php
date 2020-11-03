@@ -38,13 +38,13 @@ class UsersController extends Controller
         ]);
     }
 
+// заготовочка на редактирование пользователей, пока только админ-права изменяются
     public function update(Request $request, User $user) {
         if($request->is_admin !== 'on' && Auth::user()->id !== $user->id){
             $user->is_admin = 0;
         } else {
             $user->is_admin = 1;
         }
-
         $user->fill($request->except(['name', 'password', 'email',]))->save();
         return redirect()->route('admin.users.index')->with('success', 'Права успешно изменены');
     }

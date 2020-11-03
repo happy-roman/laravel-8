@@ -55,7 +55,10 @@ class NewsController extends Controller
             $path = Storage::putFile('public', $request->file('image'));
             $url = Storage::url($path);
         }
-
+        if (!$request->isPrivate){
+            $news->isPrivate = false;
+        }
+        $request->category_id = (int)$request->category_id;
         $news->image = $url;
         $news->fill($request->except('image'))->save();
 

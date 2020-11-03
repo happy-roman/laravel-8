@@ -7,13 +7,13 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <form method="POST" action="@if(!$news->id){{ route('admin.news.create') }}
-                                                    @else{{ route('admin.news.update', $news) }}@endif"
+                        <form method="POST" action="
+                            @if(!$news->id){{ route('admin.news.create') }}
+                            @else{{ route('admin.news.update', $news) }}
+                            @endif"
                               enctype="multipart/form-data">
                             @csrf
-                            @if(!$news->id)
-                                @method('PUT')
-                            @endif
+                            @method('PUT')
                             <div class="form-group">
                                 <label for="newsTitle">Заголовок новости</label>
                                 <input type="text" name="title" id="newsTitle" class="form-control"
@@ -23,8 +23,10 @@
                             <div class="form-group">
                                 <label for="newsCategory">Категория новости</label>
                                 <select name="category_id" id="newsCategory" class="form-control">
+
                                     @forelse($categories as $item)
-                                        <option @if ($item->id == old('category_id') ?? $item->id == $news->category_id)
+                                        <option @if ($item->id == old('category_id') && $item->id == $news->category_id)
+
                                                 selected @endif value="{{ $item['id'] }}">{{ $item['title'] }}</option>
                                     @empty
                                         <option value="0">Нет категорий</option>
