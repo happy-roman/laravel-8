@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateNewsTable extends Migration
 {
@@ -14,14 +14,13 @@ class CreateNewsTable extends Migration
     public function up()
     {
         Schema::create('news', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('category_id');
+            $table->bigIncrements('id');
             $table->string('title');
-            $table->text('text');
-            $table->string('image')->nullable(true)->default(null);
+            $table->text('description')->nullable(true);
             $table->boolean('isPrivate')->default(false);
+            $table->string('image')->nullable(true);
+            $table->string('link')->nullable(true);
             $table->timestamps();
-//            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
