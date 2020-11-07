@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\NewsParser\ParserController;
+use App\Http\Controllers\SocialLoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -23,9 +25,19 @@ use App\Http\Controllers\News\NewsController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 Route::match(['get','post'],'/profile', [ProfileController::class, 'update'])->name('profile');
+
+Route::get('/auth/vk', [SocialLoginController::class, 'loginVK'])->name('loginVk');
+Route::get('/auth/vk/response', [SocialLoginController::class, 'responseVK'])->name('responseVk');
+
+Route::get('/auth/ok', [SocialLoginController::class, 'loginOK'])->name('loginOK');
+Route::get('/auth/ok/response', [SocialLoginController::class, 'responseOK'])->name('responseOK');
+
+Route::get('/auth/git', [SocialLoginController::class, 'loginGit'])->name('loginGit');
+Route::get('/auth/git/response', [SocialLoginController::class, 'responseGit'])->name('responseGit');
+
 
 Route::name('news.')
     ->prefix('news')
@@ -53,8 +65,10 @@ Route::name('admin.')
         function () {
             Route::get('/', [IndexController::class, 'index'])->name('index');
             Route::resource('/news', 'NewsController')->except(['show']);
+            Route::get('/parse', [ParserController::class, 'index'])->name('news.parse');
             Route::get('/users', [UsersController::class, 'index'])->name('index');
             Route::resource('/users', 'UsersController')->except(['show', 'store']);
+
         }
     );
 

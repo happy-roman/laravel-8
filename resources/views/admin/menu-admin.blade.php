@@ -3,8 +3,8 @@
         >Добавить новость</a></li>
     <li><a class="nav-link btn-primary p-2 waves-effect rounded mx-2" href="{{ route('admin.news.index')}}"
         >Редакторовать новости</a></li>
-{{--    <li><a class="nav-link btn-primary p-2 waves-effect rounded mx-2" href="{{ route('admin.users.create')}}"--}}
-{{--        >Добавить пользователя</a></li>--}}
+    <li><a class="nav-link btn-primary p-2 waves-effect rounded mx-2" href="{{ route('admin.news.parse')}}"
+        >Парсить новости</a></li>
     <li><a class="nav-link btn-primary p-2 waves-effect rounded mx-2" href="{{ route('admin.users.index')}}"
         >Изменение прав пользователей</a></li>
 </ul>

@@ -6,7 +6,6 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-
                         <form method="POST" action="
                             @if(!$news->id){{ route('admin.news.create') }}
                             @else{{ route('admin.news.update', $news) }}
@@ -22,21 +21,38 @@
 
                             <div class="form-group">
                                 <label for="newsCategory">Категория новости</label>
+{{--                                <select name="category_id" id="newsCategory" class="form-control">--}}
+
+{{--                                    @forelse($categories as $item)--}}
+{{--                                        <option @if ($item->id == old('category_id') || $item->id == $news->category_id)--}}
+
+{{--                                                selected @endif value="{{ $item['id'] }}">{{ $item['title'] }}</option>--}}
+{{--                                    @empty--}}
+{{--                                        <option value="0">Нет категорий</option>--}}
+{{--                                    @endforelse--}}
+{{--                                </select>--}}
                                 <select name="category_id" id="newsCategory" class="form-control">
-
                                     @forelse($categories as $item)
-                                        <option @if ($item->id == old('category_id') && $item->id == $news->category_id)
 
-                                                selected @endif value="{{ $item['id'] }}">{{ $item['title'] }}</option>
+                                        @if (old('category_id'))
+                                            <option @if ($item->id == old('category_id')) selected
+                                                    @endif value="{{ $item->id }}">{{ $item->title }}
+                                        @else
+                                            <option @if ($item->id == $news->category_id) selected
+                                                    @endif value="{{ $item->id }}">{{ $item->title }}</option>
+                                        @endif
+
                                     @empty
+
                                         <option value="0">Нет категорий</option>
                                     @endforelse
+                                    <option value="123">Не верная категория</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
                                 <label for="newsText">Текст новости</label>
-                                <textarea name="text" id="newsText" class="form-control">{{ old('text') ?? $news->text}}
+                                <textarea name="text" id="newsText" class="form-control h-100">{{ old('text') ?? $news->text}}
                                 </textarea>
                             </div>
 
@@ -49,18 +65,16 @@
                                 id="newsPrivate" name="isPrivate" type="checkbox" value="1"
                                        class="form-check-input">
                                 <label for="newsPrivate">Приватная</label>
-
                             </div>
-
                             <div class="form-group">
                                 <input class="btn btn-outline-primary" type="submit"
-                                       value="@if ($news->id) Изменить @else Добавить@endif">
+                                       value="@if ($news->id) Изменить @else Добавить @endif">
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 @endsection
+

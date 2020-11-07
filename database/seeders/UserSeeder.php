@@ -20,8 +20,13 @@ class UserSeeder extends Seeder
     }
     private function getData() {
         $faker = Factory::create('ru_RU');
-        $data = [];
-        for ( $i=0; $i <=20; $i++ ) {
+        $data[] = [
+            'name' => 'admin',
+            'email' => 'admin@admin.ru',
+            'is_admin' => true,
+            'password' => Hash::make(123),
+        ];
+        for ( $i=0; $i <=3; $i++ ) {
             $data[] = [
                 'name' => $faker->name,
                 'email' => $faker->email,

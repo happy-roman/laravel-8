@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
-    protected $fillable = ['id','category_id', 'title', 'text', 'isPrivate', 'image'];
+    protected $fillable = ['id','category_id', 'title', 'description', 'isPrivate', 'image', 'link'];
     protected $table = 'news';
 }
