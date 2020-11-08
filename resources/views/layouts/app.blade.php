@@ -30,6 +30,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+                <a class="navbar-brand font-weight-bold text-dark" href="{{ route('home') }}">< /happy_roman/ ></a>
                 <button class="navbar-toggler" type="button"
                         data-toggle="collapse"
                         data-target="#navbarSupportedContent"
@@ -41,9 +42,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
                         @include('blocks.menu')
-
                     </ul>
 
                     <!-- Right Side Of Navbar -->

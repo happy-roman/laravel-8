@@ -17,6 +17,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.1",
         "orchestra/parser": "^6.0",
+        "predis/predis": "^1.1",
         "socialiteproviders/facebook": "^4.0",
         "socialiteproviders/github": "^4.0",
         "socialiteproviders/odnoklassniki": "^4.0",

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="laravel8.vagrant@192.168.10.10" uuid="b6efb174-c69e-4446-af73-ae275211b4ea">
+    <data-source source="LOCAL" name="laravel-8.local@localhost" uuid="de5b0017-2713-4dae-bcd8-dea8bd729348">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://192.168.10.10:3306/laravel8.vagrant</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/laravel-8.local</jdbc-url>
+      <driver-properties>
+        <property name="serverTimezone" value="UTC" />
+      </driver-properties>
     </data-source>
   </component>
 </project>

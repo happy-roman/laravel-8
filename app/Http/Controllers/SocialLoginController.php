@@ -9,7 +9,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 class SocialLoginController extends Controller
 {
-    // по хорошму надо разбить класс или переписать на фабричный патерн, но пока оставляю так
+    // Переписать на более универсальный
     public function loginVK() {
         if (Auth::check()) {
             return redirect()->route('home');
