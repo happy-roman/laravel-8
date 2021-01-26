@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -50,10 +50,22 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <ul class="nav">
+                                        <li class="nav-list"><a href="{{ route('loginVk') }}" class="nav-link"><i class="fab fa-vk"></i></a></li>
+                                        <li class="nav-list"><a href="{{ route('loginOK') }}" class="nav-link"><i class="fab fa-odnoklassniki-square"></i></a></li>
+                                        <li class="nav-list"><a href="#" class="nav-link"><i class="fab fa-facebook-square"></i></a></li>
+                                        <li class="nav-list"><a href="{{ route('loginGit') }}" class="nav-link"><i class="fab fa-github"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary rounded">
                                     {{ __('Login') }}
                                 </button>
 

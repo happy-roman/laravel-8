@@ -5,17 +5,22 @@ namespace App\Http\Controllers\News;
 use App\Http\Controllers\Controller;
 use App\Models\News\Category;
 use App\Models\News\News;
-use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
     public function index()
     {
-        return view('news.category')->with('news', Category::getCategories());
+        $categories = new Category();
+        return view('news.category')->with('news', $categories);
+    }
+    public function all()
+    {
+        $news = News::all();
+        return view('news.all')->with('news', $news);
     }
 
-    public function onePost($id)
+    public function onePost(News $news)
     {
-        return view('news.post')->with('news', News::getNewsId($id));
+        return view('news.post')->with('news', $news);
     }
 }
